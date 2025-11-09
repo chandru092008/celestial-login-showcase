@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Space Grotesk', 'sans-serif'],
+        display: ['Orbitron', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,16 +51,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        glass: {
+          DEFAULT: "hsl(var(--glass-bg) / 0.3)",
+          border: "hsl(var(--glass-border) / 0.3)",
         },
+        space: {
+          deep: "hsl(var(--space-deep))",
+          medium: "hsl(var(--space-medium))",
+        },
+        solar: "hsl(var(--solar-orange))",
+        cosmic: "hsl(var(--cosmic-cyan))",
+        star: "hsl(var(--star-white))",
       },
       borderRadius: {
         lg: "var(--radius)",
