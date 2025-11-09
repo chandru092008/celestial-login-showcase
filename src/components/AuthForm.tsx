@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { toast } from 'sonner';
 
 export const AuthForm = () => {
+  const navigate = useNavigate();
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [signupEmail, setSignupEmail] = useState('');
@@ -14,11 +17,19 @@ export const AuthForm = () => {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Login:', { loginEmail, loginPassword });
+    toast.success('🚀 Launch successful! Welcome aboard!');
+    setTimeout(() => {
+      navigate('/dashboard');
+    }, 1000);
   };
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Signup:', { signupName, signupEmail, signupPassword });
+    toast.success('✨ Account created! Preparing for launch...');
+    setTimeout(() => {
+      navigate('/dashboard');
+    }, 1000);
   };
 
   return (
